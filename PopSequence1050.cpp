@@ -35,7 +35,7 @@ int main() {
 			int increment = input - start;		// 判断是否要向栈中添加数据
 			int capacity = m - stack.size();	// 计算栈的可用空间
 			if (increment > 0) {
-				if (increment < capacity) {
+				if (increment <= capacity) {
 					for (int l = start; l < input; l++) {
 						stack.push_back(l + 1);
 					}
@@ -62,6 +62,5 @@ int main() {
 			cout << "NO" << endl;
 		}
 	}
-	system("pause");
 	return 0;
 }
