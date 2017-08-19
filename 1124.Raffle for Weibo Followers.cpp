@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 using namespace std;
-int main() {
+int main1124() {
 	int total, skip, first;
 	string user;
 	set<string> winners;

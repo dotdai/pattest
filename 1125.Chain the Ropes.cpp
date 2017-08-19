@@ -3,7 +3,7 @@
 #include <algorithm>
 
 using namespace std;
-int main() {
+int main1125() {
 	int n;
 	double seg, chain;
 	vector<double> segls;

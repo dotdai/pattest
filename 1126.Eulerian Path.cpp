@@ -11,7 +11,7 @@ int n_ve, n_ed;
 
 void dfs(int);
 
-int main() {
+int main1126() {
 	vector<int> degreels;
 	int end1, end2;
 	int num_of_odd;
