@@ -14,21 +14,23 @@ int num = 0;
 vector<int> inorder;
 vector<int> preorder;
 
+// 根据前序遍历和中序遍历打印后序遍历
+// start和end分别是中序遍历序列中的位置 
 void post_order(int start, int end) {
 	if (start > end) {
 		return;
 	}
 	int val = preorder[num++];
-	int index = 0;
+	int index = 0;		// 寻找前序遍历中val在中序遍历中的位置 
 	for (int i = start; i <= end; i++) {
 		if (inorder[i] == val) {
 			index = i;
 			break;
 		}
 	}
-	post_order(start, index-1);
-	post_order(index+1, end);
-	cout << val;
+	post_order(start, index-1);		// 遍历左子树 
+	post_order(index+1, end);		// 遍历右子树 
+	cout << val;					// 打印节点 
 	if (val != preorder[0] ) {
 		cout << " ";
 	}
@@ -46,9 +48,9 @@ int main() {
 		if (op == "Push") {
 			cin >> data;
 			input.push_back(data);
-			preorder.push_back(data);
+			preorder.push_back(data);		// 记录前序遍历 
 		} else {
-			inorder.push_back(input.back());
+			inorder.push_back(input.back());// 记录中序遍历 
 			input.pop_back();
 		}
 	}
